@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Dark navy portfolio tokens */
+    --background: 0.13 0.04 240;
+    --foreground: 0.95 0.02 240;
+    --card: 0.18 0.05 235;
+    --card-foreground: 0.95 0.02 240;
+    --popover: 0.2 0.05 235;
+    --popover-foreground: 0.95 0.02 240;
+    --primary: 0.82 0.12 195;
+    --primary-foreground: 0.13 0.04 240;
+    --secondary: 0.2 0.05 235;
+    --secondary-foreground: 0.95 0.02 240;
+    --muted: 0.2 0.05 235;
+    --muted-foreground: 0.6 0.03 240;
+    --accent: 0.82 0.12 195;
+    --accent-foreground: 0.13 0.04 240;
+    --destructive: 0.65 0.22 15;
+    --destructive-foreground: 0.95 0.02 240;
+    --border: 0.28 0.05 235;
+    --input: 0.28 0.05 235;
+    --ring: 0.82 0.12 195;
+    --chart-1: 0.73 0.18 145;
+    --chart-2: 0.65 0.22 300;
+    --chart-3: 0.65 0.22 15;
+    --chart-4: 0.78 0.17 75;
+    --chart-5: 0.76 0.14 215;
+    --sidebar: 0.15 0.04 238;
+    --sidebar-foreground: 0.95 0.02 240;
+    --sidebar-primary: 0.82 0.12 195;
+    --sidebar-primary-foreground: 0.13 0.04 240;
+    --sidebar-accent: 0.2 0.05 235;
+    --sidebar-accent-foreground: 0.95 0.02 240;
+    --sidebar-border: 0.28 0.05 235;
+    --sidebar-ring: 0.82 0.12 195;
+    /* Named tokens */
+    --cyan: oklch(0.82 0.12 195);
+    --cyan-hover: oklch(0.87 0.12 193);
+    --cyan-glow: oklch(0.76 0.14 215);
+    --body-text: oklch(0.78 0.03 240);
+    --label-text: oklch(0.6 0.03 240);
+    --navy-card: oklch(0.18 0.05 235);
+    --navy-border: oklch(0.28 0.05 235);
+    --chip-green: oklch(0.73 0.18 145);
+    --chip-purple: oklch(0.65 0.22 300);
+    --chip-pink: oklch(0.65 0.22 15);
+    --chip-orange: oklch(0.78 0.17 75);
+    --chip-blue: oklch(0.76 0.14 215);
+    --chip-teal: oklch(0.78 0.13 185);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: linear-gradient(
+      135deg,
+      oklch(0.13 0.04 240) 0%,
+      oklch(0.15 0.05 235) 100%
+    );
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: oklch(0.13 0.04 240);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: oklch(0.28 0.05 235);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.82 0.12 195);
+  }
+}
